@@ -1,0 +1,9 @@
+<div class="gameboard clearfix" ng-controller="GameCtrl as game">
+	<div class="alphabet-container">
+		<a class="letter" ng-repeat="letter in game.letterSet" ng-click="game.toggleLetterOff($index)">{{letter}}</a>
+	</div>
+	<div class="game-sidebar">
+		<img class="scroll-button" src="img/scroll-button.png">
+	</div>
+</div>
+

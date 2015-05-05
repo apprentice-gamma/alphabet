@@ -1,0 +1,74 @@
+$light-blue: #9cc9d9;
+$dark-blue: #1b121b;
+
+html.alphabet {
+	background-color: #333;
+}
+body.alphabet-app {
+    width: 800px;
+    height: 480px;
+    margin: auto;
+    color: $dark-blue;
+}
+.reserved-header {
+	background: #333 url(../img/bg-header.jpg) 50% 0 no-repeat;
+	width: 800px;
+	height: 90px;
+	position: relative;
+
+	&:after {
+		content: "";
+		width: 800px;
+		height: 15px;
+		position: absolute;
+		bottom: -15px;
+		left: 0;
+		background: url(../img/shadow-tile.png) 0 0 repeat-x;
+	}
+}
+.close-button {
+	position: absolute;
+	right: 20px;
+	bottom: -70px;
+	width: 50px;
+	height: 50px;
+}
+.alphabet-container {
+	float: left;
+	width: 590px;
+	height: 390px;
+	background: transparent url(../img/bg-game-offset.jpg) 0 0 repeat-y;	
+	overflow: hidden;
+	padding-left: 17px;
+}
+.letter {
+	width: 123px;
+	height: 123px;
+	text-align: center;
+	background: transparent url(../img/pog.png) 3px 0 no-repeat;
+	padding: 0;
+	font: normal 80px/123px "Haymaker" sans-serif;
+	float: left;
+	margin: 0 22px 32px 0;
+
+	&:nth-child(4n) {
+		margin-right: 0;
+	}
+}
+.letter.toggled-off {
+	display: none;
+}
+.game-sidebar {
+	background: #4a5d6f url(../img/bg-sidebar.jpg) 0 0 no-repeat;
+	float: right;
+	width: 210px;
+	height: 390px;	
+}
+.scroll-button {
+	display: block;
+	width: 156px;
+	margin: 114px auto 0;
+}
+.donetrue {
+    text-decoration: line-through;
+}
