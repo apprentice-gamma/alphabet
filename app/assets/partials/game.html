@@ -1,9 +1,13 @@
 <div class="gameboard clearfix" ng-controller="GameCtrl as game">
 	<div class="alphabet-container">
-		<a class="letter" ng-repeat="letter in game.letterSet" ng-click="game.toggleLetterOff($index)">{{letter}}</a>
+		<div class="scroll-container">
+			<div class="scrolling-gameboard clearfix" style="top:-{{game.scrollOffset}}px">
+				<a class="letter" ng-repeat="letter in game.letterSet" ng-click="game.toggleLetterOff($index)">{{letter}}</a>
+			</div>
+		</div>
 	</div>
 	<div class="game-sidebar">
-		<img class="scroll-button" src="img/scroll-button.png">
+		<a href="" ng-click="game.scroll(game.scrollOffset)" class="scroll-button"><img src="img/scroll-button.png"></a>
 	</div>
 </div>
 
