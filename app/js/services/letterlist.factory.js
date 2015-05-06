@@ -8,22 +8,13 @@
 		letters.toggleLetterOff = function(index){
 			letters.currentAlphabet.splice(index,1);
 		};
-		letters.scroll = function(currentIndex){
-			console.log("You clicked scroll " + currentIndex);
-			switch(currentIndex){
-				case 0:
-					currentIndex = 300;
-					break;
-				case 300:
-					currentIndex = 600;
-					break;
-				case 600:
-					currentIndex = 0;
-					break;
-				default:
-					currentIndex = 0;
-			}
-			return currentIndex;
+		letters.scroll = function(){
+			var scrollSplice = letters.currentAlphabet.splice(0,8);
+			console.log(scrollSplice);
+			var newCurrentAlphabet = letters.currentAlphabet.concat(scrollSplice);
+			letters.currentAlphabet = newCurrentAlphabet;
+			console.log("You clicked scroll " + letters.currentAlphabet);
+			return letters.currentAlphabet;
 		};
 
 		return letters;

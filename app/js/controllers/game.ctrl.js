@@ -4,9 +4,10 @@ function GameCtrl(letterList) {
 	var game = this;
 	game.letterSet = letterList.currentAlphabet;
 	game.toggleLetterOff = letterList.toggleLetterOff;
-	game.scrollOffset = 0;
-	game.scroll =  function(){
-		game.scrollOffset = letterList.scroll(game.scrollOffset);
-		console.log(game.scrollOffset);
+	game.scroll = function(){
+		var newCurrentAlphabet = letterList.scroll();
+		console.log("One - The controller thinks it is " + newCurrentAlphabet);
+		game.letterSet = newCurrentAlphabet;
+		console.log("Two- The controller thinks it is " + game.letterSet);
 	};
 }
