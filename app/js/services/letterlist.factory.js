@@ -10,10 +10,9 @@
 		};
 		letters.scroll = function(){
 			var scrollSplice = letters.currentAlphabet.splice(0,8);
-			console.log(scrollSplice);
 			var newCurrentAlphabet = letters.currentAlphabet.concat(scrollSplice);
 			letters.currentAlphabet = newCurrentAlphabet;
-			console.log("You clicked scroll " + letters.currentAlphabet);
+			
 			return letters.currentAlphabet;
 		};
 
