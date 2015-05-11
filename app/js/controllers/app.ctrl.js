@@ -1,6 +1,11 @@
 angular.module('app').controller('AppCtrl', AppCtrl);
+
 function AppCtrl() {
-	var vm = this;
-	vm.title = "The Alphabet Game";
-	console.log('You are in the app controller');
+	var app = this;
+	app.title = "The Alphabet Game";
+	app.messages = {
+			"pause": "Your game has been saved.",
+			"quit": "Quit",
+			"resume": "Resume"
+		};
 }

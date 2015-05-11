@@ -3,20 +3,13 @@ angular.module('app', ['ngSanitize', 'ngResource', 'ui.router', 'oc.modal'])
 	.constant('VERSION', '0.7.0')
 	.config(function appConfig($stateProvider, $locationProvider, $urlRouterProvider) {
 		$locationProvider.hashPrefix('!');
-		$urlRouterProvider.otherwise("/todo");
+		$urlRouterProvider.otherwise("/");
 
 		$stateProvider.state('game', {
 			url: "/",
 			views: {
 				"mainView": {
 					templateUrl: "partials/game.html"
-				}
-			}
-		}).state('todo', {
-			url: "/todo", // root route
-			views: {
-				"mainView": {
-					templateUrl: "partials/todo.html"
 				}
 			}
 		});
