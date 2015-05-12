@@ -9,9 +9,15 @@
 	    <base href="/" />
     </head>
     <body class="alphabet-app" ng-controller="AppCtrl as app">
-        <div class="tray-button"></div>
+        <div class="modal-screen" ng-class="{ 'visible' : app.modalToggle }">
+            <h2 class="announcement">{{app.modalMessage}}</h2>
+            <ul class="modal-options">
+                <li class="option" ng-repeat="option in app.modalOptions"><a href="" ng-click="option.behavior">{{option.value}}</a></li>
+            </ul>
+        </div>
+        <div class="tray ctrlbutton"></div>
         <div class="reserved-header">
-            <div class="close-button">
+            <div class="close ctrlbutton">
                 <img src="img/close.png"/>
             </div>
         </div>

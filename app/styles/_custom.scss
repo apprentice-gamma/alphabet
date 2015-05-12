@@ -22,6 +22,21 @@ body.alphabet-app {
 		}
 	}
 }
+.hidden {
+	display: none !important;
+}
+.visible {
+	display: block !important;
+}
+.modal-screen {
+	display: none;
+	position: absolute;
+	z-index: 100;
+	width: 800px;
+	height: 590px;
+	background: transparent url(../img/bg-modal.png);
+	color: #fff;
+}
 .reserved-header {
 	background: #333 url(../img/bg-header.jpg) 50% 0 no-repeat;
 	width: 800px;
@@ -38,20 +53,41 @@ body.alphabet-app {
 		background: url(../img/shadow-tile.png) 0 0 repeat-x;
 	}
 }
-.close-button {
-	position: absolute;
-	right: 20px;
-	bottom: -70px;
-	width: 50px;
-	height: 50px;
+.button {
+	display: inline-block;
+	border-radius: 
 }
-.tray-button {
+.ctrlbutton {
+	display: block;
 	position: absolute;
+}
+.close.ctrlbutton {
+	right: 13px;
+	bottom: -63px;
+	width: 56px;
+	height: 56px;
+	z-index: 10;
+	opacity: 1;
+}
+.tray.ctrlbutton {
 	bottom: 0;
 	right: 0;
 	width: 210px;
 	height: 80px;
 	background-color: rgba(0,0,0,0.6);
+	z-index: 11;
+}
+.pause.ctrlbutton {
+	width: 101px;
+	height: 76px;
+	top: 66px;
+	left: 30px;
+}
+.scroll.ctrlbutton {
+	width: 156px;
+	height: 146px;
+	top: 154px;
+	left: 30px;
 }
 .alphabet-container {
 	float: left;
@@ -90,16 +126,9 @@ body.alphabet-app {
 	display: none;
 }
 .game-sidebar {
+	position: relative;
 	background: #4a5d6f url(../img/bg-sidebar.jpg) 0 0 no-repeat;
 	float: right;
 	width: 210px;
 	height: 390px;	
-}
-.scroll-button {
-	display: block;
-	width: 156px;
-	margin: 114px auto 0;
-}
-.donetrue {
-    text-decoration: line-through;
 }

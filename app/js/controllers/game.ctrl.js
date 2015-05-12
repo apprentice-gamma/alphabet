@@ -1,6 +1,6 @@
 angular.module('app').controller('GameCtrl', GameCtrl);
 
-function GameCtrl(letterList) {
+function GameCtrl(letterList, appFactory) {
 	var game = this;
 	game.letterSet = letterList.currentAlphabet;
 	game.toggleLetterOff = letterList.toggleLetterOff;
