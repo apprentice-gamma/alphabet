@@ -7,8 +7,10 @@
 			"pause": "Your game has been saved",
 			"title": "The Alphabet Game"
 		};
+		appfactory.currentValue = NaN;
 		appfactory.modalToggleValue = function(value){
 			var currentValue = value;
+			appfactory.currentValue = value;
 			return currentValue;
 		};
 	
@@ -16,11 +18,17 @@
 		
 		appfactory.modalOptions = {
 			quit: {
-			"value": "Quit",
-			"behavior":  "Quit the app - this is a placeholder for actual behavior" },
+			value : "Quit",
+			behavior :  function(){
+					console.log("You clicked Quit.");
+				}
+			},
 			resume: {
-			"value": "Resume",
-			"behavior": "Resume the game - this is a placeholder for actual behavior"
+			value : "Resume",
+			behavior : function(){
+					appfactory.modalToggleValue(false);
+					console.log("You clicked resume and set the toggle to " + appfactory.modalToggleValue(false) + " which is another way of saying " + appfactory.currentValue );
+				}
 			}
 		};
 

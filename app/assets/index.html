@@ -12,7 +12,7 @@
         <div class="modal-screen" ng-class="{ 'visible' : app.modalToggle }">
             <h2 class="announcement">{{app.modalMessage}}</h2>
             <ul class="modal-options">
-                <li class="option" ng-repeat="option in app.modalOptions"><a class="modal-options button" href="" ng-click="option.behavior">{{option.value}}</a></li>
+                <li class="option" ng-repeat="option in app.modalOptions"><a class="modal-options button" href="" ng-click="option.behavior()">{{option.value}}</a></li>
             </ul>
         </div>
         <div class="tray ctrlbutton"></div>

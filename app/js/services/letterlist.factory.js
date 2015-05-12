@@ -5,7 +5,10 @@
 		var letters = {};
 		letters.alphabetInit = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
 		letters.currentAlphabet = letters.alphabetInit;
+		letters.tapped = null;
 		letters.toggleLetterOff = function(index){
+			//letters.tapped = true;
+			//setTimeout( function(){letters.tapped = null} , 1500);
 			letters.currentAlphabet.splice(index,1);
 			letters.saveGame();
 		};
@@ -21,6 +24,7 @@
 
 			return letters.currentAlphabet;
 		};
+
 		
 		return letters;
 	}

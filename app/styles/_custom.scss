@@ -43,6 +43,7 @@ body.alphabet-app {
 }
 .modal-options {
 	list-style-type: none;
+	padding: 0;
 	text-align: center;
 
 	.option {
@@ -71,6 +72,7 @@ body.alphabet-app {
 		width: 800px;
 		height: 15px;
 		position: absolute;
+		z-index: 90;
 		bottom: -15px;
 		left: 0;
 		background: url(../img/shadow-tile.png) 0 0 repeat-x;
@@ -146,6 +148,9 @@ body.alphabet-app {
 }
 .letter.toggled-off {
 	display: none;
+}
+.letter.tapped {
+	background: transparent url(../img/pog-selected.jpg) 0 0 no-repeat;
 }
 .game-sidebar {
 	position: relative;

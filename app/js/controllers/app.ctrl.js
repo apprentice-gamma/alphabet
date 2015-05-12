@@ -10,5 +10,9 @@ function AppCtrl(appFactory) {
 		app.modalOptions = appFactory.modalOptions;
 		console.log("The modal options values are:\n" + app.modalOptions.quit.value + '\n' + app.modalOptions.quit.behavior);
 	};
+	app.testValue = appFactory.currentValue;
+	
+	
+	
 	console.log("0-1 - appCtrl modalToggle value is currently set at " + app.modalToggle );
 }

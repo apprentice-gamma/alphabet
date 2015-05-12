@@ -8,4 +8,5 @@ function GameCtrl(letterList, appFactory) {
 		var newCurrentAlphabet = letterList.scroll();
 		game.letterSet = newCurrentAlphabet;
 	};
+	//game.tapped = letterList.tapped;
 }
