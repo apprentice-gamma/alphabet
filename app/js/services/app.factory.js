@@ -2,8 +2,8 @@
 	angular.module('app').factory('appFactory', appFactory);
 
 	function appFactory(){
-		var appfactory = {};
 		
+		var appfactory = {};
 		appfactory.currentValue = NaN;
 		appfactory.modalToggleValue = function(value){
 			var currentValue = value;
@@ -14,8 +14,10 @@
 		console.log("0 - Modal value is currently set at " + appfactory.modalToggleValue());
 
 		appfactory.modalWindow = function(){
+			
 			var modalWindow = {};
 			console.log('2 - Entering appfactory dot modalWindow');
+			
 			var currentValue = appfactory.modalToggleValue(true);
 			console.log("3 - Modal value is currently set at " + currentValue);
 

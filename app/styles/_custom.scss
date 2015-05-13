@@ -67,6 +67,17 @@ body.alphabet-app {
 	height: 90px;
 	position: relative;
 
+	&:before {
+		content: "";
+		width: 800px;
+		height: 90px;
+		position: absolute;
+		z-index: 80;
+		top: 0;
+		left: 0;
+		background-color: gray;
+		opacity: 0.6;
+	}
 	&:after {
 		content: "";
 		width: 800px;
@@ -98,7 +109,7 @@ body.alphabet-app {
 	right: 0;
 	width: 210px;
 	height: 80px;
-	background-color: rgba(0,0,0,0.2);
+	background-color: rgba(0,0,0,0);
 	z-index: 11;
 	position: absolute;
 

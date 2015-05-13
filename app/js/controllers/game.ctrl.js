@@ -8,9 +8,9 @@ function GameCtrl(letterList, appFactory) {
 		var newCurrentAlphabet = letterList.scroll();
 		game.letterSet = newCurrentAlphabet;
 	};
-	game.player = function(name, score){
-		this.name = name;
-		this.score = score;
-	};
+	// game.player = function(name, score){
+	// 	this.name = name;
+	// 	this.score = score;
+	// };
 	//game.tapped = letterList.tapped;
 }
