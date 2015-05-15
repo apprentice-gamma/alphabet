@@ -2,8 +2,8 @@
 	angular.module('app').factory('letterList', letterList);
 
 	function letterList(){
+		
 		var letters = {};
-		//Set up an object for each letter so that 
 		letters.alphabetInit = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
 		letters.currentAlphabet = letters.alphabetInit;
 		letters.tapped = null;

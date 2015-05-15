@@ -1,6 +1,6 @@
 angular.module('app').controller('AppCtrl', AppCtrl);
 
-function AppCtrl(appFactory) {
+function AppCtrl($state, letterList, appFactory) {
 
 	var app = this;
 	app.modalToggle = false;
@@ -41,8 +41,9 @@ function AppCtrl(appFactory) {
 	};
 	app.toggleLetterOff = function(index){
 			//set up a tapped state to let the user be aware that they have successfully tapped the letter. Use a delay and inactive state to mimic something being pushed, and then vanishing.
-			//letterlist.currentAlphabet.splice(index,1);
-			//app.assignScore();
+			
+			letterList.currentAlphabet.splice(index,1);
+			app.assignScore();
 			console.log("You tapped toggleletteroff");
 		};
 	//console.log("0-1 - appCtrl modalToggle value is currently set at " + app.modalToggle );
