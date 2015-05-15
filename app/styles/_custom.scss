@@ -1,3 +1,4 @@
+
 $reserved-overlay: #808080;
 $dark-blue: #1b121b;
 
@@ -188,3 +189,19 @@ body.alphabet-app {
 	width: 210px;
 	height: 390px;	
 }
+.score-container {
+
+}
+.player {
+	display: inline-block;
+	width: 200px;
+	height: 390px;		
+}
+.playerone { background: #81cce5 url(../img/ic-player1.jpg) }
+.playertwo { background: #81cce5 url(../img/ic-player2.jpg) }
+.playerthree { background: #81cce5 url(../img/ic-player3.jpg) }
+.playerfour { background: #81cce5 url(../img/ic-player4.jpg) }
+
+
+
+

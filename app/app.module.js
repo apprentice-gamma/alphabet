@@ -12,6 +12,14 @@ angular.module('app', ['ngSanitize', 'ngResource', 'ui.router', 'oc.modal'])
 					templateUrl: "partials/game.html"
 				}
 			}
+		})
+		.state('score', {
+			url: "/score",
+			views: {
+				"mainView": {
+					templateUrl: "partials/score.html"
+				}
+			}
 		});
 
 		// /!\ Without server side support html5 must be disabled.

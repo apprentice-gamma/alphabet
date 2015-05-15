@@ -5,13 +5,13 @@
 		
 		var appfactory = {};
 		appfactory.currentValue = NaN;
-		appfactory.modalToggleValue = function(value){
-			var currentValue = value;
-			appfactory.currentValue = value;
-			return currentValue;
-		};
+		// appfactory.modalToggleValue = function(value) {
+		// 	var currentValue = value;
+		// 	appfactory.currentValue = value;
+		// 	return currentValue;
+		// };
 	
-		console.log("0 - Modal value is currently set at " + appfactory.modalToggleValue());
+		//console.log("0 - Modal value is currently set at " + appfactory.modalToggleValue());
 
 		appfactory.modalWindow = function(){
 			
