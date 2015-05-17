@@ -27,15 +27,12 @@ function scoreCtrl($state){
 		}
 	];
 	score.addScore = function(playerLabel){
-		//open score window
-		 
-		//add score
+		
 		for( var players = score.players, i = 0; i < players.length; i++ ) {
-			if( players[i].label == playerLabel ){
+			if( players[i].label === playerLabel ){
 				players[i].score ++;
 
-				console.log("Loop " +i+ ", player " + players[i].label + "'s score is" + " " + players[i].score);
-				break;
+				console.log(playerLabel + " Loop " + i + ", players dot length is " + players.length + " " + players[i].label + "\'s score is " + players[i].score);
 			}
 			$state.go("game");
 		}
