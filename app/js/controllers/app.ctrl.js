@@ -12,8 +12,7 @@ function AppCtrl($state, letterList, appFactory) {
 	};
 	app.messages = {
 		pause: "Your game has been saved",
-		addpoint : "Which player found the letter?",
-		title : "The Alphabet Game"
+		addpoint : "Which player found the letter?"
 	};
 	app.modalOptions = {
 		quit: {
@@ -39,13 +38,16 @@ function AppCtrl($state, letterList, appFactory) {
 		var test = localStorage.getItem("dataName");
 		console.log("Just stored the item " + test);
 	};
+	app.tapped = null;
 	app.toggleLetterOff = function(index){
-			//set up a tapped state to let the user be aware that they have successfully tapped the letter. Use a delay and inactive state to mimic something being pushed, and then vanishing.
-			
-			letterList.currentAlphabet.splice(index,1);
+		app.tapped = true;
+		setTimeout(function() { 
 			app.assignScore();
-			console.log("You tapped toggleletteroff");
-		};
-	//console.log("0-1 - appCtrl modalToggle value is currently set at " + app.modalToggle );
+			letterList.currentAlphabet.splice(index,1); }, 
+			1000);
+		
+		
+		console.log("You tapped toggleletteroff");
+	};
 }
 

@@ -1,6 +1,7 @@
 
 $reserved-overlay: #808080;
 $dark-blue: #1b121b;
+$display-font: "Haymaker";
 
 html.alphabet {
 	background-color: #333;
@@ -168,7 +169,7 @@ body.alphabet-app {
 	text-align: center;
 	background: transparent url(../img/pog.png) 3px 0 no-repeat;
 	padding: 0;
-	font: normal 80px/123px "Haymaker" sans-serif;
+	font: normal 80px/123px $display-font sans-serif;
 	float: left;
 	margin: 0 22px 32px 0;
 
@@ -190,7 +191,19 @@ body.alphabet-app {
 	height: 390px;	
 }
 .score-container {
+	position: relative;
 
+	.title {
+		position: absolute;
+		top: 0;
+		left: 50px;
+		padding: 10px 30px;
+		font: normal 33px/60px $display-font sans-serif;
+		background: #fff;
+		width: 700px;
+		border-bottom-left-radius: 50px;
+		border-bottom-right-radius: 50px;
+	}
 }
 .player {
 	display: inline-block;

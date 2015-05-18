@@ -2,7 +2,7 @@
 	<div class="alphabet-container">
 		<div class="scroll-container">
 			<div class="scrolling-gameboard clearfix">
-				<a class="letter" ng-class="{ 'tapped' : game.tapped }" ng-repeat="letter in game.letterSet" ng-click="app.toggleLetterOff($index)">{{letter}}</a>
+				<a class="letter {{$index}}" ng-class="{ 'tapped{{$index}}' : app.tapped }" ng-repeat="letter in game.letterSet" ng-click="app.toggleLetterOff($index)">{{letter}}</a>
 			</div>
 		</div>
 	</div>
