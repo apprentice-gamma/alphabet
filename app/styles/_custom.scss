@@ -181,7 +181,9 @@ body.alphabet-app {
 	display: none;
 }
 .letter.tapped {
-	background: transparent url(../img/pog-selected.jpg) 0 0 no-repeat;
+	background: transparent url(../img/pog-selected.png) 3px 0 no-repeat;
+	position: relative;
+	top: 10px;
 }
 .game-sidebar {
 	position: relative;

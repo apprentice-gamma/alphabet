@@ -40,12 +40,13 @@ function AppCtrl($state, letterList, appFactory) {
 	};
 	app.tapped = null;
 	app.toggleLetterOff = function(index){
-		app.tapped = true;
+		app.tapped = index;
+		console.log(app.tapped);
 		setTimeout(function() { 
+			app.tapped = null;
 			app.assignScore();
 			letterList.currentAlphabet.splice(index,1); }, 
-			1000);
-		
+			800);
 		
 		console.log("You tapped toggleletteroff");
 	};
