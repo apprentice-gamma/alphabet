@@ -1,0 +1,4 @@
+<div class="score-container" ng-controller="scoreCtrl as score">
+	<div class ="title">{{app.messages.addpoint}}</div>
+	<a ng-repeat="player in score.players" class="player {{player.label}}" href="" ng-click="score.addScore(player.label)"></a>
+</div>

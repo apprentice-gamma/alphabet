@@ -1,0 +1,13 @@
+<div class="gameboard clearfix" ng-controller="GameCtrl as game">
+	<div class="alphabet-container">
+		<div class="scroll-container">
+			<div class="scrolling-gameboard clearfix">
+				<a class="letter" ng-class="{ 'tapped' : app.tapped == $index }" ng-repeat="letter in game.letterSet" ng-click="app.toggleLetterOff($index)">{{letter}}</a>
+			</div>
+		</div>
+	</div>
+	<div class="game-sidebar">
+		<a href="" ng-click="app.modal(app.messages.pause)" class="pause ctrlbutton"><img src="img/pause.png"></a>
+		<a href="" ng-click="game.scroll()" class="scroll ctrlbutton"><img src="img/scroll-button.png"></a>
+	</div>
+</div>
