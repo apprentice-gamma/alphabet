@@ -46,7 +46,7 @@ function AppCtrl($state, letterList, appFactory) {
 			app.tapped = null;
 			app.assignScore();
 			letterList.currentAlphabet.splice(index,1); }, 
-			800);
+			600);
 		
 		console.log("You tapped toggleletteroff");
 	};
